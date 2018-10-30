@@ -9,13 +9,13 @@ Date of Creation: 10/29/2018, 9:54:15 PM
 #include <iostream>
 #include <string>
 #include "Message.h"
-using namespace std;
 int main()
 {
-   Message mail;
-   mail.append(); // Maybe this should be the constructor, the assignment was unclear.
+   time_t timest;
+   Message mail("Jon.Doe@Email.com","Jane.Doe@email.com");
+   mail.append("Hey what's up!");
    mail.to_string();
-   cout << "Your message is: "<< endl;
-   mail.print();'\n';
+   std::cout << "Your message is: "<< std::endl;
+   mail.print();
    return 0;
 }

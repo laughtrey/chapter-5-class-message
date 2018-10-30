@@ -3,35 +3,24 @@
 #include "Message.h"
 using namespace std;
 // Constructor
-Message::Message()
+Message::Message(std::string r, std::string s)
 {
-
+   m_recipient = r;
+   m_sender = s;
+   m_body = " ";
+   time(&timestamp);
 }
-Message::Message(string r, string s, string b)
+//--Functions--
+void Message::append(std::string m) // appends a message to the mail
 {
-   recipient = r;
-   sender = s;
-   body = b;
-   timest = 0;
+  m_body += '\n' + m;
 }
-// ---Functions---
-// Mutator
-void Message::append()
+Message::to_string() // Cocatinate the entire thing to one string email
 {
-   cout << "Please enter your recipient: ";
-   getline(cin, recipient);
-   cout << "Please enter your name as sender: ";
-   getline(cin, sender);
-   cout << "Please enter your message: ";
-   getline(cin, body);
-   time(&timest);
-}
-string Message::to_string() // Cocatinate the entire thing to one string email
-{
-   email = "From: " + sender + '\n' + "To: " + recipient + '\n' + "Sent at: " + ctime(&timest) + "Message: " + body;
+   m_email = "From: " + m_sender + '\n' + "To: " + m_recipient + '\n' + "Sent at: " + ctime(&timestamp) + "Message: " + m_body;
 
 }
 void Message::print() // just prints email.
 {
-   cout << email;
+   std::cout << m_email;
 }

@@ -3,18 +3,17 @@
 /*
 class Message
 */
-using namespace std;
 class Message
 {
 private:
-   string recipient, sender, body, email;
-   time_t timest;
+   std::string m_recipient, m_sender, m_body, m_email;
+   time_t timestamp;
 
 public:
-   Message(); // Constructor with no parameters
-   Message(string r, string s, string b); // Constructor that takes the sender and recipient and sets the time stamp to current time
-   void append(); // Appends a line of text to the message body
-   string to_string(); // makes the message into one long string
+   Message();
+   Message(std::string r, std::string s); // Constructor that takes the sender and recipient and sets the time stamp to current time
+   void append(std::string m); // Appends a line of text to the message body
+   to_string(); // makes the message into one long string
    void print(); // prints the message text
 };
 #endif
