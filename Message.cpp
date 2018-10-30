@@ -26,7 +26,7 @@ void Message::append()
    getline(cin, body);
    time(&timest);
 }
-Message::to_string() // Cocatinate the entire thing to one string email
+string Message::to_string() // Cocatinate the entire thing to one string email
 {
    email = "From: " + sender + '\n' + "To: " + recipient + '\n' + "Sent at: " + ctime(&timest) + "Message: " + body;
 
