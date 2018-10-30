@@ -16,6 +16,6 @@ int main()
    mail.append(); // Maybe this should be the constructor, the assignment was unclear.
    mail.to_string();
    cout << "Your message is: "<< endl;
-   mail.print();
+   mail.print();'\n';
    return 0;
 }
