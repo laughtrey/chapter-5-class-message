@@ -15,7 +15,7 @@ void Message::append(std::string m) // appends a message to the mail
 {
   m_body += '\n' + m;
 }
-Message::to_string() // Cocatinate the entire thing to one string email
+void Message::to_string() // Cocatinate the entire thing to one string email
 {
    m_email = "From: " + m_sender + '\n' + "To: " + m_recipient + '\n' + "Sent at: " + ctime(&timestamp) + "Message: " + m_body;
 

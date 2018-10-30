@@ -13,7 +13,7 @@ public:
    Message();
    Message(std::string r, std::string s); // Constructor that takes the sender and recipient and sets the time stamp to current time
    void append(std::string m); // Appends a line of text to the message body
-   to_string(); // makes the message into one long string
+   void to_string(); // makes the message into one long string
    void print(); // prints the message text
 };
 #endif
