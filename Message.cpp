@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
+#include <ctime>
 #include "Message.h"
-using namespace std;
 // Constructor
 Message::Message(std::string r, std::string s)
 {
